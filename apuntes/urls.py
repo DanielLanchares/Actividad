@@ -19,5 +19,8 @@ from entries.api.views import EntryListAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/entries', EntryListAPI.as_view(), name="entry_list_api")
+    path('api/v1/entries', EntryListAPI.as_view(), name="entry_list_api"),
+    path('api/v1/entries/<int:pk>/', EntryListAPI.as_view(), name="entry_detail_api")
+    
+    
 ]
